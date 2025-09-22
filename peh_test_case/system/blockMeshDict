@@ -18,33 +18,32 @@ H 1;
 alpha 1;
 Lx #calc "$H*(($alpha*3.858) + 5.142)";
 Ly #calc "$H*3.036";
-Lz #calc "$H*0.1";
+Lz #calc "$H*4.5";
 
-nX 768;
-nY 385;
-nZ 128;
+nX 350;
+nY 200;
+nZ 192;
 
 	
 	
 vertices
 (
 
-	
-    (0 28   0)   // 0
-    ($Lx  28  0)   // 1
-    ($Lx #calc "$Ly+28"   0)   // 2
-    (  0 #calc "$Ly+28"   0)   // 3
+    (0  $H  0)   // 0
+    ($Lx  $H  0)   // 1
+    ($Lx $Ly   0)   // 2
+    (  0 $Ly   0)   // 3
 
-    (  0 28 $Lz)   // 4
-    ($Lx 28 $Lz)   // 5
-    ($Lx #calc "$Ly+28" $Lz)   // 6
-    (  0 #calc "$Ly+28" $Lz)   // 7
+    (  0 $H $Lz)   // 4
+    ($Lx $H $Lz)   // 5
+    ($Lx $Ly $Lz)   // 6
+    (  0 $Ly $Lz)   // 7
+
 );
 
 blocks
 (
-   // hex (0 1 2 3 4 5 6 7) ($nX $nY $nZ) simpleGrading (1 ((0.5 0.5 100)(0.5 0.5 0.01)) 1)
-   hex (0 1 2 3 4 5 6 7) ($nX $nY $nZ) simpleGrading (1 1 1)
+   hex (0 1 2 3 4 5 6 7) ($nX $nY $nZ) simpleGrading (1 ((0.5 0.5 100)(0.5 0.5 0.01)) 1)
 );
 
 
@@ -63,7 +62,7 @@ edges #codeStream
 		const scalar alpha = 1;
 		const scalar Lx = H*((alpha*3.858) + 5.142);
         const scalar xMin = 0;
-        const scalar xMax = Lx;
+        const scalar xMax = 28*Lx;
         const label nPoints = 1000;
         const scalar dx = (xMax - xMin)/scalar(nPoints - 1);
 
@@ -74,11 +73,11 @@ edges #codeStream
         {
             scalar x = xMin + i*dx;
             profile[i].x() = x;
-            if (x > 126) x = Lx - x;
+            if (x > 126) x = xMax - x;
 
             if (x >= 0 && x < 9)
             {
-                profile[i].y() =
+                profile[i].y() = 
 				min(28,
                     28
                   + 6.775070969851E-03*x*x
@@ -88,7 +87,7 @@ edges #codeStream
             }
             else if (x >= 9 && x < 14)
             {
-                profile[i].y() =
+                profile[i].y() = 
                     25.07355893131
                   + 0.9754803562315*x
                   - 1.016116352781E-01*x*x
@@ -104,7 +103,7 @@ edges #codeStream
             }
             else if (x >= 20 && x < 30)
             {
-                profile[i].y() =
+                profile[i].y() = 
                     4.046435022819E+01
                   - 1.379581654948E+00*x
                   + 1.945884504128E-02*x*x
@@ -112,7 +111,7 @@ edges #codeStream
             }
             else if (x >= 30 && x < 40)
             {
-                profile[i].y() =
+                profile[i].y() = 
                     1.792461334664E+01
                   + 8.743920332081E-01*x
                   - 5.567361123058E-02*x*x
@@ -120,7 +119,7 @@ edges #codeStream
             }
             else if (x >= 40 && x < 54)
             {
-                profile[i].y() =
+                profile[i].y() = 
                     max
                     (
                         0,
@@ -130,17 +129,15 @@ edges #codeStream
                       + 2.674976141766E-05*x*x*x
                     );
             }
-			/*else if (x >= 54 && x < 126)
-			{
-			profile[i].y() = 28;
-			}*/
 			
             profile[i].z() = 0;
+			profile[i]*=(1/28);
         }
         os << profile << nl;
 
         os << "spline 4 5" << nl;
-        profile.replace(2, 128);
+        profile.replace(2, 126/28);
+
         os << profile << nl;
 
         os  << ");" << nl;
