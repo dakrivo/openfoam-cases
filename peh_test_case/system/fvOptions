@@ -17,13 +17,15 @@ FoamFile
 
 momentumSource
 {
-    type            meanVelocityForce;
+    type            pressureGradientExplicitSource;
+    active          on;            //on/off switch
+    selectionMode   all;       //cellSet // points //cellZone
 
-    selectionMode   cellZone;
-    cellZone        inletCellZone;
-
-    fields          (U);
-    Ubar            (0.5 0 0);
+    pressureGradientExplicitSourceCoeffs
+    {
+        fieldNames  (U);
+        Ubar        (0.020188 0 0 );
+    }
 }
 
 
