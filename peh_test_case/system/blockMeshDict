@@ -14,7 +14,8 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-H 1;
+scale 0.03571428571;
+H 28;
 alpha 1;
 Lx #calc "$H*(($alpha*3.858) + 5.142)";
 Ly #calc "$H*3.036";
@@ -131,12 +132,12 @@ edges #codeStream
             }
 			
             profile[i].z() = 0;
-			profile[i]*=(1/28);
+			//profile[i]*=(1/28);
         }
         os << profile << nl;
 
         os << "spline 4 5" << nl;
-        profile.replace(2, 126/28);
+        profile.replace(2, 126);
 
         os << profile << nl;
 
