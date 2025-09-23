@@ -31,13 +31,13 @@ nZ 192;
 vertices
 (
 
-    (0  $H  0)   // 0
-    ($Lx  $H  0)   // 1
+    (0  $scf  0)   // 0
+    ($Lx  $scf  0)   // 1
     ($Lx $Ly   0)   // 2
     (  0 $Ly   0)   // 3
 
-    (  0 $H $Lz)   // 4
-    ($Lx $H $Lz)   // 5
+    (  0 $scf $Lz)   // 4
+    ($Lx $scf $Lz)   // 5
     ($Lx $Ly $Lz)   // 6
     (  0 $Ly $Lz)   // 7
 
@@ -45,7 +45,7 @@ vertices
 
 blocks
 (
-   hex (0 1 2 3 4 5 6 7) ($nX $nY $nZ) simpleGrading (1 ((0.5 0.5 100)(0.5 0.5 0.01)) 1)
+   hex (0 1 2 3 4 5 6 7) ($nX $nY $nZ) simpleGrading (1 1 1)
 );
 
 
@@ -56,6 +56,7 @@ edges #codeStream
     #{
         #include "pointField.H"
         #include "mathematicalConstants.H"
+		#include "Field.H"
     #};
 
     code
@@ -64,20 +65,29 @@ edges #codeStream
 		const scalar alpha = 1;
 		const scalar Lx = H*((alpha*3.858) + 5.142);
         const scalar xMin = 0;
-        const scalar xMax = 28*Lx;
+        const scalar xMax = 28*9;
         const label nPoints = 1000;
         const scalar dx = (xMax - xMin)/scalar(nPoints - 1);
 
         os  << "(" << nl << "spline 0 1" << nl;
         pointField profile(nPoints, Zero);
-
+		
+		scalarField xa(nPoints, Zero);
+	
+		for (label i = 0; i < nPoints; ++i)
+        {	
+		scalar x = xMin + i*dx;
+        profile[i].x() = x;
+		xa[i] = x;
+		}
+		
+		
         for (label i = 0; i < nPoints; ++i)
         {
-            scalar x = xMin + i*dx;
-            profile[i].x() = x;
-            if (x > 126) x = xMax - x;
+            scalar x = profile[i].x();
+			if (x > xMax/2) {profile[i].y() = profile[nPoints-i].y();}
 
-            if (x >= 0 && x < 9)
+            else if (x >= 0 && x < 9)
             {
                 profile[i].y() = 
 				min(28,
@@ -131,14 +141,32 @@ edges #codeStream
                       + 2.674976141766E-05*x*x*x
                     );
             }
+			else if ((x>54) && (x<=126)){
+				profile[i].y() = 0;
+			}
 			
             profile[i].z() = 0;
-			//profile[i]*=(1/28);
         }
+		for (label i = 0; i < nPoints; ++i)
+        {
+        if ((xa[i]>=0) && (xa[i]<54)) {
+            profile[i].x() *= alpha;}
+        else if ((xa[i]>54) && (xa[i]<=126)) {
+            profile[i].x() -=(54*(1-alpha));}
+		else if ((xa[i]>126) && (xa[i]<=198)) {
+            profile[i].x() -= (54*(1-alpha));}
+        else if ((xa[i]>198)&& (xa[i]<=252)) {
+			profile[i].x() -= (54*(1-alpha));
+			profile[i].x() -= (xa[i]-198)*(1-alpha);}
+		}
+		
         os << profile << nl;
 
         os << "spline 4 5" << nl;
-        profile.replace(2, 126);
+		for (label i = 0; i < nPoints; ++i)
+        {
+			profile[i].z() = 126;
+		}
 
         os << profile << nl;
 
