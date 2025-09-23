@@ -42,6 +42,7 @@ SIMPLE
     consistent      yes;
     pRefCell        0;
     pRefValue       0;
+	convergenceCriterion 1.0e-4;
 }
 
 relaxationFactors

@@ -15,11 +15,12 @@ FoamFile
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 scale 0.03571428571;
-H 28;
+H 1;
+scf 28;
 alpha 1;
-Lx #calc "$H*(($alpha*3.858) + 5.142)";
-Ly #calc "$H*3.036";
-Lz #calc "$H*4.5";
+Lx #calc "$scf*$H*(($alpha*3.858) + 5.142)";
+Ly #calc "$scf*$H*3.036";
+Lz #calc "$scf*$H*4.5";
 
 nX 350;
 nY 200;
