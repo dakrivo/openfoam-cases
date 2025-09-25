@@ -9,61 +9,31 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    location    "system";
-    object      controlDict;
+    class       volScalarField;
+    location    "0";
+    object      epsilon;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     simpleFoam;
+dimensions      [0 2 -3 0 0 0 0];
 
-startFrom       latestTime;
+internalField   uniform 0.006866;
 
-startTime       0;
-
-stopAt          endTime;
-
-endTime         10000;
-
-deltaT          1;
-
-writeControl    timeStep;
-
-writeInterval   1000;
-
-purgeWrite      3;
-
-writeFormat     ascii;
-
-writePrecision  6;
-
-writeCompression off;
-
-timeFormat      general;
-
-timePrecision   6;
-
-runTimeModifiable true;
-
-functions
+boundaryField
 {
-    solverInfo
-    {
-        type            solverInfo;
-        libs ("libutilityFunctionObjects.so");
-        enabled         true;
-        writeControl    timeStep;
-		writeInterval   1;
 
-        fields
-        (
-            p
-            U
-            k
-			omega
-        );
-		writeResidualFields no;
+	"(inlet|outlet|front|back)"
+    {
+        type            cyclic;
     }
+
+    "(top|hills)"
+    {
+        type            epsilonWallFunction;
+        value           $internalField;
+    }
+
+
 }
 
 
