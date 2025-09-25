@@ -22,7 +22,7 @@ type meanVelocityForce;
 selectionMode all;
 
 fields (U);
-Ubar (0.020188 0 0 );
+Ubar (0.7210 0 0 );
 relaxation 1.0;
 } 
 
