@@ -16,7 +16,7 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0;
+internalField   uniform 2.94e-06;
 
 boundaryField
 {
@@ -27,7 +27,9 @@ boundaryField
 
     "(top|hills)"
     {
-        type            zeroGradient;
+      //  type            zeroGradient; 
+        type            kqRWallFunction;
+        value           $internalField;
     }
 }
 

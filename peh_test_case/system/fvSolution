@@ -22,11 +22,12 @@ solvers
         solver          GAMG;
         smoother        DICGaussSeidel;
         tolerance       1e-06;
-        relTol          0.05;
+        relTol          0.01;
+		nNonOrthogonalCorrectors 5;
     }
 
 
-    "(U|k|nuTilda)"
+    "(U|k|nuTilda|epsilon|omega)"
     {
         solver          PBiCG;
         preconditioner  DILU;
@@ -42,15 +43,24 @@ SIMPLE
     consistent      yes;
     pRefCell        0;
     pRefValue       0;
-	convergenceCriterion 1.0e-4;
+	residualControl
+    {
+        p               1e-4;
+        U               1e-6;
+        "(k|epsilon|omega|f|v2)" 1e-5;
+    }
 }
 
 relaxationFactors
 {
+	fields
+	{
+	p 0.7;
+	}
     equations
     {
         U           0.9;
-        nuTilda     0.7;
+        ".*"     0.8;
     }
 }
 

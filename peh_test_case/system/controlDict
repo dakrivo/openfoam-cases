@@ -23,7 +23,7 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         1000;
+endTime         1200;
 
 deltaT          1;
 
@@ -33,7 +33,7 @@ writeInterval   100;
 
 purgeWrite      3;
 
-writeFormat     binary;
+writeFormat     ascii;
 
 writePrecision  6;
 
@@ -44,6 +44,27 @@ timeFormat      general;
 timePrecision   6;
 
 runTimeModifiable true;
+
+functions
+{
+    solverInfo
+    {
+        type            solverInfo;
+        libs ("libutilityFunctionObjects.so");
+        enabled         true;
+        writeControl    timeStep;
+		writeInterval   1;
+
+        fields
+        (
+            p
+            U
+            k
+			omega
+        );
+		writeResidualFields no;
+    }
+}
 
 
 // ************************************************************************* //
