@@ -1,0 +1,92 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     simpleFoam;
+
+startFrom       latestTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         1000;
+
+deltaT          1;
+
+writeControl    timeStep;
+
+writeInterval   1000;
+
+purgeWrite      3;
+
+writeFormat     ascii;
+
+writePrecision  6;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+functions
+{
+    solverInfo
+    {
+        type            solverInfo;
+        libs ("libutilityFunctionObjects.so");
+        enabled         true;
+        writeControl    timeStep;
+		writeInterval   1;
+
+        fields
+        (
+            p
+            U
+            k
+			omega
+        );
+		writeResidualFields no;
+    }
+	
+	columnAverage
+	{
+    // Mandatory entries (unmodifiable)
+    type            columnAverage;
+    libs            (fieldFunctionObjects);
+
+    // Mandatory entries (runtime modifiable)
+    patches         (front);
+    fields          (U p k omega);
+    // Optional (inherited) entries
+    region          region0;
+    enabled         true;
+    log             true;
+    timeStart       99;
+    timeEnd         100;
+    executeControl  timeStep;
+    executeInterval 1;
+    writeControl    timeStep;
+    writeInterval   100;
+}
+
+}
+
+
+// ************************************************************************* //
