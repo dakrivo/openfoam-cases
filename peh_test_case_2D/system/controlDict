@@ -65,43 +65,12 @@ functions
 		writeResidualFields no;
     }
 	
-	columnAverage
-	{
-    // Mandatory entries (unmodifiable)
-    type            columnAverage;
-    libs            (fieldFunctionObjects);
 
-    // Mandatory entries (runtime modifiable)
-    patches         (front);
-    fields          (
-	U
-{
-mean yes;
 }
-	p
-{
-mean yes;
-}
+
+libs
+(
+    "pressureGradientExplicitSource.so"
 );
-    // Optional (inherited) entries
-    region          region0;
-    enabled         true;
-    log             true;
-    timeStart       99;
-    timeEnd         100;
-    executeControl  timeStep;
-    executeInterval 1;
-    writeControl    timeStep;
-    writeInterval   100;
-}
-        fields
-        (
-            U
-            columnAverage:columnAverage(UMean)
-			columnAverage:columnAverage(p)
-        );
-
-}
-
 
 // ************************************************************************* //
