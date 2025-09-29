@@ -1,0 +1,1080 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _7bdb509494-20201222 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Sep 29 2025
+Time   : 12:39:40
+Host   : speed-11.encs.concordia.ca
+PID    : 2239359
+I/O    : uncollated
+Case   : /speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from "system/blockMeshDict"
+Using #calc at line 21 in file "/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/system/blockMeshDict"
+Using #codeStream with "/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_61d187a80e4ce2d5a89beab0b9353ad98054eb91.so"
+Using #calc at line 22 in file "/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/system/blockMeshDict"
+Using #codeStream with "/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_195fdce0fea46070e80956fc00ba39a479e3a70a.so"
+Using #calc at line 23 in file "/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/system/blockMeshDict"
+Using #codeStream with "/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_8c472df662a6e3b4a060cc9d6ff58d17bdbb79c2.so"
+Using #codeStream at line 54 in file "/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/system/blockMeshDict"
+Using #codeStream with "/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_e27bd9007906a00a05a811ad57965d88e265777a.so"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+Deleting polyMesh directory "constant/polyMesh"
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 0.0357143
+    Block 0 cell size :
+        i : 0.0274547 .. 0.0274547
+        j : 0.000467156 .. 0.000467156
+        k : 0.1 .. 0.1
+
+
+There are no merge patch pairs
+
+Detected cyclic patches; ordering boundary faces
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (0 -6.8929e-07 0) (9 3.036 0.1)
+  nPoints: 141102
+  nCells: 70000
+  nFaces: 280550
+  nInternalFaces: 139450
+----------------
+Patches
+----------------
+  patch 0 (start: 139450 size: 200) name: inlet
+  patch 1 (start: 139650 size: 200) name: outlet
+  patch 2 (start: 139850 size: 350) name: top
+  patch 3 (start: 140200 size: 350) name: hills
+  patch 4 (start: 140550 size: 70000) name: front
+  patch 5 (start: 210550 size: 70000) name: back
+
+End
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _7bdb509494-20201222 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : topoSet
+Date   : Sep 29 2025
+Time   : 12:39:41
+Host   : speed-11.encs.concordia.ca
+PID    : 2239360
+I/O    : uncollated
+Case   : /speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading topoSetDict
+
+--> FOAM Warning :
+    Reading "/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/system/topoSetDict" at line 72
+    Imbalanced '{' with ')'
+--> FOAM Warning :
+    Reading "/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/system/topoSetDict" at line 75
+    Imbalanced brackets
+
+
+--> FOAM FATAL IO ERROR: (openfoam-2012)
+"ill defined primitiveEntry starting at keyword 'actions' on line 19 and ending at line 75"
+
+file: /speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/system/topoSetDict at line 75.
+
+    From void Foam::primitiveEntry::readEntry(const Foam::dictionary&, Foam::Istream&)
+    in file db/dictionary/primitiveEntry/primitiveEntryIO.C at line 236.
+
+FOAM exiting
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _7bdb509494-20201222 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar -force
+Date   : Sep 29 2025
+Time   : 12:39:41
+Host   : speed-11.encs.concordia.ca
+PID    : 2239361
+I/O    : uncollated
+Case   : /speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Removing 32 existing processor directories
+Create mesh
+
+Calculating distribution of cells
+Selecting decompositionMethod scotch [32]
+
+Finished decomposition in 0.13 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 2187
+    Number of faces shared with processor 1 = 46
+    Number of faces shared with processor 3 = 49
+    Number of faces shared with processor 22 = 19
+    Number of faces shared with processor 23 = 46
+    Number of processor patches = 4
+    Number of processor faces = 160
+    Number of boundary faces = 4412
+
+Processor 1
+    Number of cells = 2201
+    Number of faces shared with processor 0 = 46
+    Number of faces shared with processor 2 = 45
+    Number of faces shared with processor 3 = 8
+    Number of faces shared with processor 4 = 9
+    Number of faces shared with processor 7 = 50
+    Number of faces shared with processor 16 = 19
+    Number of faces shared with processor 22 = 33
+    Number of processor patches = 7
+    Number of processor faces = 210
+    Number of boundary faces = 4402
+
+Processor 2
+    Number of cells = 2195
+    Number of faces shared with processor 1 = 45
+    Number of faces shared with processor 3 = 58
+    Number of faces shared with processor 4 = 49
+    Number of faces shared with processor 8 = 15
+    Number of faces shared with processor 9 = 39
+    Number of processor patches = 5
+    Number of processor faces = 206
+    Number of boundary faces = 4390
+
+Processor 3
+    Number of cells = 2187
+    Number of faces shared with processor 0 = 49
+    Number of faces shared with processor 1 = 8
+    Number of faces shared with processor 2 = 58
+    Number of faces shared with processor 8 = 35
+    Number of processor patches = 4
+    Number of processor faces = 150
+    Number of boundary faces = 4426
+
+Processor 4
+    Number of cells = 2208
+    Number of faces shared with processor 1 = 9
+    Number of faces shared with processor 2 = 49
+    Number of faces shared with processor 5 = 41
+    Number of faces shared with processor 7 = 41
+    Number of faces shared with processor 9 = 9
+    Number of faces shared with processor 14 = 46
+    Number of faces shared with processor 15 = 7
+    Number of processor patches = 7
+    Number of processor faces = 202
+    Number of boundary faces = 4416
+
+Processor 5
+    Number of cells = 2199
+    Number of faces shared with processor 4 = 41
+    Number of faces shared with processor 6 = 51
+    Number of faces shared with processor 7 = 15
+    Number of faces shared with processor 15 = 57
+    Number of processor patches = 4
+    Number of processor faces = 164
+    Number of boundary faces = 4436
+
+Processor 6
+    Number of cells = 2164
+    Number of faces shared with processor 5 = 51
+    Number of faces shared with processor 7 = 47
+    Number of faces shared with processor 17 = 51
+    Number of processor patches = 3
+    Number of processor faces = 149
+    Number of boundary faces = 4375
+
+Processor 7
+    Number of cells = 2170
+    Number of faces shared with processor 1 = 50
+    Number of faces shared with processor 4 = 41
+    Number of faces shared with processor 5 = 15
+    Number of faces shared with processor 6 = 47
+    Number of faces shared with processor 16 = 35
+    Number of faces shared with processor 17 = 12
+    Number of processor patches = 6
+    Number of processor faces = 200
+    Number of boundary faces = 4340
+
+Processor 8
+    Number of cells = 2165
+    Number of faces shared with processor 2 = 15
+    Number of faces shared with processor 3 = 35
+    Number of faces shared with processor 9 = 52
+    Number of faces shared with processor 11 = 48
+    Number of processor patches = 4
+    Number of processor faces = 150
+    Number of boundary faces = 4376
+
+Processor 9
+    Number of cells = 2184
+    Number of faces shared with processor 2 = 39
+    Number of faces shared with processor 4 = 9
+    Number of faces shared with processor 8 = 52
+    Number of faces shared with processor 10 = 45
+    Number of faces shared with processor 11 = 1
+    Number of faces shared with processor 14 = 48
+    Number of processor patches = 6
+    Number of processor faces = 194
+    Number of boundary faces = 4368
+
+Processor 10
+    Number of cells = 2208
+    Number of faces shared with processor 9 = 45
+    Number of faces shared with processor 11 = 45
+    Number of faces shared with processor 13 = 37
+    Number of faces shared with processor 14 = 13
+    Number of faces shared with processor 28 = 20
+    Number of faces shared with processor 29 = 42
+    Number of processor patches = 6
+    Number of processor faces = 202
+    Number of boundary faces = 4416
+
+Processor 11
+    Number of cells = 2207
+    Number of faces shared with processor 8 = 48
+    Number of faces shared with processor 9 = 1
+    Number of faces shared with processor 10 = 45
+    Number of faces shared with processor 28 = 54
+    Number of processor patches = 4
+    Number of processor faces = 148
+    Number of boundary faces = 4464
+
+Processor 12
+    Number of cells = 2188
+    Number of faces shared with processor 13 = 64
+    Number of faces shared with processor 14 = 10
+    Number of faces shared with processor 15 = 55
+    Number of faces shared with processor 24 = 32
+    Number of processor patches = 4
+    Number of processor faces = 161
+    Number of boundary faces = 4425
+
+Processor 13
+    Number of cells = 2174
+    Number of faces shared with processor 10 = 37
+    Number of faces shared with processor 12 = 64
+    Number of faces shared with processor 14 = 48
+    Number of faces shared with processor 24 = 13
+    Number of faces shared with processor 25 = 45
+    Number of faces shared with processor 29 = 7
+    Number of processor patches = 6
+    Number of processor faces = 214
+    Number of boundary faces = 4348
+
+Processor 14
+    Number of cells = 2173
+    Number of faces shared with processor 4 = 46
+    Number of faces shared with processor 9 = 48
+    Number of faces shared with processor 10 = 13
+    Number of faces shared with processor 12 = 10
+    Number of faces shared with processor 13 = 48
+    Number of faces shared with processor 15 = 39
+    Number of processor patches = 6
+    Number of processor faces = 204
+    Number of boundary faces = 4346
+
+Processor 15
+    Number of cells = 2166
+    Number of faces shared with processor 4 = 7
+    Number of faces shared with processor 5 = 57
+    Number of faces shared with processor 12 = 55
+    Number of faces shared with processor 14 = 39
+    Number of processor patches = 4
+    Number of processor faces = 158
+    Number of boundary faces = 4370
+
+Processor 16
+    Number of cells = 2186
+    Number of faces shared with processor 1 = 19
+    Number of faces shared with processor 7 = 35
+    Number of faces shared with processor 17 = 36
+    Number of faces shared with processor 19 = 44
+    Number of faces shared with processor 20 = 21
+    Number of faces shared with processor 22 = 47
+    Number of processor patches = 6
+    Number of processor faces = 202
+    Number of boundary faces = 4372
+
+Processor 17
+    Number of cells = 2180
+    Number of faces shared with processor 6 = 51
+    Number of faces shared with processor 7 = 12
+    Number of faces shared with processor 16 = 36
+    Number of faces shared with processor 18 = 43
+    Number of faces shared with processor 19 = 16
+    Number of processor patches = 5
+    Number of processor faces = 158
+    Number of boundary faces = 4398
+
+Processor 18
+    Number of cells = 2187
+    Number of faces shared with processor 17 = 43
+    Number of faces shared with processor 19 = 55
+    Number of faces shared with processor 27 = 51
+    Number of processor patches = 3
+    Number of processor faces = 149
+    Number of boundary faces = 4421
+
+Processor 19
+    Number of cells = 2208
+    Number of faces shared with processor 16 = 44
+    Number of faces shared with processor 17 = 16
+    Number of faces shared with processor 18 = 55
+    Number of faces shared with processor 20 = 43
+    Number of faces shared with processor 26 = 39
+    Number of faces shared with processor 27 = 3
+    Number of processor patches = 6
+    Number of processor faces = 200
+    Number of boundary faces = 4416
+
+Processor 20
+    Number of cells = 2178
+    Number of faces shared with processor 16 = 21
+    Number of faces shared with processor 19 = 43
+    Number of faces shared with processor 21 = 46
+    Number of faces shared with processor 22 = 36
+    Number of faces shared with processor 26 = 12
+    Number of faces shared with processor 30 = 46
+    Number of processor patches = 6
+    Number of processor faces = 204
+    Number of boundary faces = 4356
+
+Processor 21
+    Number of cells = 2185
+    Number of faces shared with processor 20 = 46
+    Number of faces shared with processor 22 = 14
+    Number of faces shared with processor 23 = 44
+    Number of faces shared with processor 30 = 2
+    Number of faces shared with processor 31 = 57
+    Number of processor patches = 5
+    Number of processor faces = 163
+    Number of boundary faces = 4405
+
+Processor 22
+    Number of cells = 2178
+    Number of faces shared with processor 0 = 19
+    Number of faces shared with processor 1 = 33
+    Number of faces shared with processor 16 = 47
+    Number of faces shared with processor 20 = 36
+    Number of faces shared with processor 21 = 14
+    Number of faces shared with processor 23 = 53
+    Number of processor patches = 6
+    Number of processor faces = 202
+    Number of boundary faces = 4356
+
+Processor 23
+    Number of cells = 2182
+    Number of faces shared with processor 0 = 46
+    Number of faces shared with processor 21 = 44
+    Number of faces shared with processor 22 = 53
+    Number of processor patches = 3
+    Number of processor faces = 143
+    Number of boundary faces = 4413
+
+Processor 24
+    Number of cells = 2170
+    Number of faces shared with processor 12 = 32
+    Number of faces shared with processor 13 = 13
+    Number of faces shared with processor 25 = 61
+    Number of faces shared with processor 26 = 3
+    Number of faces shared with processor 27 = 48
+    Number of processor patches = 5
+    Number of processor faces = 157
+    Number of boundary faces = 4471
+
+Processor 25
+    Number of cells = 2171
+    Number of faces shared with processor 13 = 45
+    Number of faces shared with processor 24 = 61
+    Number of faces shared with processor 26 = 46
+    Number of faces shared with processor 29 = 46
+    Number of processor patches = 4
+    Number of processor faces = 198
+    Number of boundary faces = 4442
+
+Processor 26
+    Number of cells = 2206
+    Number of faces shared with processor 19 = 39
+    Number of faces shared with processor 20 = 12
+    Number of faces shared with processor 24 = 3
+    Number of faces shared with processor 25 = 46
+    Number of faces shared with processor 27 = 48
+    Number of faces shared with processor 29 = 8
+    Number of faces shared with processor 30 = 44
+    Number of processor patches = 7
+    Number of processor faces = 200
+    Number of boundary faces = 4412
+
+Processor 27
+    Number of cells = 2186
+    Number of faces shared with processor 18 = 51
+    Number of faces shared with processor 19 = 3
+    Number of faces shared with processor 24 = 48
+    Number of faces shared with processor 26 = 48
+    Number of processor patches = 4
+    Number of processor faces = 150
+    Number of boundary faces = 4414
+
+Processor 28
+    Number of cells = 2207
+    Number of faces shared with processor 10 = 20
+    Number of faces shared with processor 11 = 54
+    Number of faces shared with processor 29 = 49
+    Number of faces shared with processor 29 = 1
+    Number of faces shared with processor 30 = 10
+    Number of faces shared with processor 31 = 48
+    Number of processor patches = 6
+    Number of processor faces = 182
+    Number of boundary faces = 4570
+
+Processor 29
+    Number of cells = 2208
+    Number of faces shared with processor 10 = 42
+    Number of faces shared with processor 13 = 7
+    Number of faces shared with processor 25 = 46
+    Number of faces shared with processor 26 = 8
+    Number of faces shared with processor 28 = 49
+    Number of faces shared with processor 28 = 1
+    Number of faces shared with processor 30 = 49
+    Number of processor patches = 7
+    Number of processor faces = 202
+    Number of boundary faces = 4510
+
+Processor 30
+    Number of cells = 2184
+    Number of faces shared with processor 20 = 46
+    Number of faces shared with processor 21 = 2
+    Number of faces shared with processor 26 = 44
+    Number of faces shared with processor 28 = 10
+    Number of faces shared with processor 29 = 49
+    Number of faces shared with processor 31 = 47
+    Number of processor patches = 6
+    Number of processor faces = 198
+    Number of boundary faces = 4368
+
+Processor 31
+    Number of cells = 2208
+    Number of faces shared with processor 21 = 57
+    Number of faces shared with processor 28 = 48
+    Number of faces shared with processor 30 = 47
+    Number of processor patches = 3
+    Number of processor faces = 152
+    Number of boundary faces = 4464
+
+Number of processor faces = 2866
+Max number of cells = 2208 (0.937143% above average 2187.5)
+Max number of processor patches = 7 (38.2716% above average 5.0625)
+Max number of faces between processors = 214 (19.4696% above average 179.125)
+
+Time = 0
+
+Processor 0: field transfer
+Processor 1: field transfer
+Processor 2: field transfer
+Processor 3: field transfer
+Processor 4: field transfer
+Processor 5: field transfer
+Processor 6: field transfer
+Processor 7: field transfer
+Processor 8: field transfer
+Processor 9: field transfer
+Processor 10: field transfer
+Processor 11: field transfer
+Processor 12: field transfer
+Processor 13: field transfer
+Processor 14: field transfer
+Processor 15: field transfer
+Processor 16: field transfer
+Processor 17: field transfer
+Processor 18: field transfer
+Processor 19: field transfer
+Processor 20: field transfer
+Processor 21: field transfer
+Processor 22: field transfer
+Processor 23: field transfer
+Processor 24: field transfer
+Processor 25: field transfer
+Processor 26: field transfer
+Processor 27: field transfer
+Processor 28: field transfer
+Processor 29: field transfer
+Processor 30: field transfer
+Processor 31: field transfer
+
+End
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _7bdb509494-20201222 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : simpleFoam -parallel
+Date   : Sep 29 2025
+Time   : 12:39:46
+Host   : speed-11.encs.concordia.ca
+PID    : 2239377
+I/O    : uncollated
+Case   : /nfs/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D
+nProcs : 32
+Hosts  :
+(
+    (speed-11.encs.concordia.ca 32)
+)
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: convergence criteria
+    field p	 tolerance 0.0001
+    field U	 tolerance 1e-06
+    field "(k|epsilon|omega|f|v2)"	 tolerance 1e-05
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kOmegaSST
+Selecting patchDistMethod meshWave
+RAS
+{
+    RASModel        kOmegaSST;
+    printCoeffs     on;
+    turbulence      on;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+    decayControl    false;
+    kInf            0;
+    omegaInf        0;
+}
+
+No MRF models present
+
+Creating finite volume options from "system/fvOptions"
+
+Selecting finite volume options type meanVelocityForce
+    Source: momentumSource
+[0] [1] 
+[1] 
+[1] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[1] Wrong token type - expected word, found on line 0: punctuation '('
+[1] 
+[1] file: IOstream.momentumSource.cellZone at line 0.
+[2] 
+[2] 
+[2] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[2] Wrong token type - expected word, found on line 0: punctuation '('
+[2] 
+[2] file: IOstream.momentumSource.cellZone at line 0.
+[2] [3] 
+[3] 
+[3] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[3] Wrong token type - expected word, found on line 0: punctuation '('
+[3] 
+[3] file: IOstream.momentumSource.cellZone at line 0.
+[3] 
+[4] 
+[4] 
+[4] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[4] Wrong token type - expected word, found on line 0: punctuation '('
+[4] 
+[4] file: IOstream.momentumSource.cellZone at line 0.
+[4] 
+[4]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)[5] 
+[5] 
+[5] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[5] Wrong token type - expected word, found on line 0: punctuation '('
+[5] 
+[5] file: IOstream.momentumSource.cellZone at line 0.
+[5] 
+[5]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[6] 
+[6] 
+[6] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[6] Wrong token type - expected word, found on line 0: punctuation '('
+[6] 
+[6] file: IOstream.momentumSource.cellZone at line 0.
+[6] 
+[6]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[6]     in file [7] 
+[7] 
+[7] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[7] Wrong token type - expected word, found on line 0: punctuation '('
+[7] 
+[7] file: IOstream.momentumSource.cellZone at line 0.
+[7] 
+[7]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[7]     in file primitives/strings/word/wordIO.C at line [8] 
+[8] 
+[8] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[8] Wrong token type - expected word, found on line 0: punctuation '('
+[8] 
+[8] file: IOstream.momentumSource.cellZone at line 0.
+[8] 
+[8]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[8]     in file primitives/strings/word/wordIO.C at line 78.
+[9] 
+[9] 
+[9] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[9] Wrong token type - expected word, found on line 0: punctuation '('
+[9] 
+[9] file: IOstream.momentumSource.cellZone at line 0.
+[9] 
+[9]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[9]     in file primitives/strings/word/wordIO.C at line 78.
+[10] 
+[10] 
+[10] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[10] Wrong token type - expected word, found on line 0: punctuation '('
+[10] 
+[10] file: IOstream.momentumSource.cellZone at line 0.
+[10] 
+[10]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[10]     in file primitives/strings/word/wordIO.C at line 78.
+[10] [12] 
+[12] 
+[12] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[12] Wrong token type - expected word, found on line 0: punctuation '('
+[12] 
+[12] file: IOstream.momentumSource.cellZone at line 0.
+[12] 
+[12]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[12]     in file primitives/strings/word/wordIO.C at line 78.
+[12] 
+FOAM parallel run exiting
+[12] [16] 
+[16] 
+[16] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[16] Wrong token type - expected word, found on line 0: punctuation '('
+[16] 
+[16] file: IOstream.momentumSource.cellZone at line 0.
+[16] 
+[16]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[16]     in file primitives/strings/word/wordIO.C at line 78.
+[16] 
+FOAM parallel run exiting
+[16] 
+[17] 
+[17] 
+[17] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[17] Wrong token type - expected word, found on line 0: punctuation '('
+[17] 
+[17] file: IOstream.momentumSource.cellZone at line 0.
+[17] 
+[17]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[17]     in file primitives/strings/word/wordIO.C at line 78.
+[17] 
+FOAM parallel run exiting
+[17] 
+[20] 
+[20] 
+[20] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[20] Wrong token type - expected word, found on line 0: punctuation '('
+[20] 
+[20] file: IOstream.momentumSource.cellZone at line 0.
+[20] 
+[20]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[20]     in file primitives/strings/word/wordIO.C at line 78.
+[20] 
+FOAM parallel run exiting
+[20] 
+[31] 
+[31] 
+[31] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[31] Wrong token type - expected word, found on line 0: punctuation '('
+[31] 
+[31] file: IOstream.momentumSource.cellZone at line 0.
+[31] 
+[31]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[31]     in file primitives/strings/word/wordIO.C at line 78.
+[31] [1] 
+[1]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[1]     in file primitives/strings/word/wordIO.C at line 78.
+[1] 
+FOAM parallel run exiting
+[1] 
+
+[2]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[2]     in file primitives/strings/word/wordIO.C at line 78.
+[2] 
+FOAM parallel run exiting
+[2] 
+[3]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[3]     in file primitives/strings/word/wordIO.C at line 78.
+[3] 
+FOAM parallel run exiting
+[3] 
+
+[4]     in file primitives/strings/word/wordIO.C at line 78.
+[4] 
+FOAM parallel run exiting
+[4] 
+[5]     in file primitives/strings/word/wordIO.C at line 78.
+[5] 
+FOAM parallel run exiting
+[5] 
+primitives/strings/word/wordIO.C at line 78.
+[6] 
+FOAM parallel run exiting
+[6] 
+78.
+[7] 
+FOAM parallel run exiting
+[7] 
+[8] 
+FOAM parallel run exiting
+[8] 
+[9] 
+FOAM parallel run exiting
+[9] 
+[11] 
+[11] 
+[11] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[11] Wrong token type - expected word, found on line 0: punctuation '('
+[11] 
+[11] file: IOstream.momentumSource.cellZone at line 0.
+[11] 
+[11]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[11]     in file primitives/strings/word/wordIO.C at line 78.
+[11] 
+FOAM parallel run exiting
+[11] 
+
+FOAM parallel run exiting
+[10] 
+[13] 
+[13] 
+[13] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[13] Wrong token type - expected word, found on line 0: punctuation '('
+[13] 
+[13] file: IOstream.momentumSource.cellZone at line 0.
+[13] 
+[13]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[13]     in file primitives/strings/word/wordIO.C at line 78.
+[13] 
+FOAM parallel run exiting
+[13] 
+[14] 
+[14] 
+[14] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[14] Wrong token type - expected word, found on line 0: punctuation '('
+[14] 
+[14] file: IOstream.momentumSource.cellZone at line 0.
+[14] 
+[14]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[14]     in file primitives/strings/word/wordIO.C at line 78.
+[14] 
+FOAM parallel run exiting
+[14] 
+[15] 
+[15] 
+[15] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[15] Wrong token type - expected word, found on line 0: punctuation '('
+[15] 
+[15] file: IOstream.momentumSource.cellZone at line 0.
+[15] 
+[15]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[15]     in file primitives/strings/word/wordIO.C at line 78.
+[15] 
+FOAM parallel run exiting
+[15] 
+
+[18] 
+[18] 
+[18] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[18] Wrong token type - expected word, found on line 0: punctuation '('
+[18] 
+[18] file: IOstream.momentumSource.cellZone at line 0.
+[18] 
+[18]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[18]     in file primitives/strings/word/wordIO.C at line 78.
+[18] 
+FOAM parallel run exiting
+[18] 
+[19] 
+[19] 
+[19] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[19] Wrong token type - expected word, found on line 0: punctuation '('
+[19] 
+[19] file: IOstream.momentumSource.cellZone at line 0.
+[19] 
+[19]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[19]     in file primitives/strings/word/wordIO.C at line 78.
+[19] 
+FOAM parallel run exiting
+[19] 
+[21] 
+[21] 
+[21] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[21] Wrong token type - expected word, found on line 0: punctuation '('
+[21] 
+[21] file: IOstream.momentumSource.cellZone at line 0.
+[21] 
+[21]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[21]     in file primitives/strings/word/wordIO.C at line 78.
+[21] 
+FOAM parallel run exiting
+[21] 
+[22] 
+[22] 
+[22] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[22] Wrong token type - expected word, found on line 0: punctuation '('
+[22] 
+[22] file: IOstream.momentumSource.cellZone at line 0.
+[22] 
+[22]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[22]     in file primitives/strings/word/wordIO.C at line 78.
+[22] 
+FOAM parallel run exiting
+[22] 
+[23] 
+[23] 
+[23] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[23] Wrong token type - expected word, found on line 0: punctuation '('
+[23] 
+[23] file: IOstream.momentumSource.cellZone at line 0.
+[23] 
+[23]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[23]     in file primitives/strings/word/wordIO.C at line 78.
+[23] 
+FOAM parallel run exiting
+[23] 
+[24] 
+[24] 
+[24] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[24] Wrong token type - expected word, found on line 0: punctuation '('
+[24] 
+[24] file: IOstream.momentumSource.cellZone at line 0.
+[24] 
+[24]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[24]     in file primitives/strings/word/wordIO.C at line 78.
+[24] 
+FOAM parallel run exiting
+[24] 
+[25] 
+[25] 
+[25] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[25] Wrong token type - expected word, found on line 0: punctuation '('
+[25] 
+[25] file: IOstream.momentumSource.cellZone at line 0.
+[25] 
+[25]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[25]     in file primitives/strings/word/wordIO.C at line 78.
+[25] 
+FOAM parallel run exiting
+[25] 
+[26] 
+[26] 
+[26] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[26] Wrong token type - expected word, found on line 0: punctuation '('
+[26] 
+[26] file: IOstream.momentumSource.cellZone at line 0.
+[26] 
+[26]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[26]     in file primitives/strings/word/wordIO.C at line 78.
+[26] 
+FOAM parallel run exiting
+[26] 
+[27] 
+[27] 
+[27] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[27] Wrong token type - expected word, found on line 0: punctuation '('
+[27] 
+[27] file: IOstream.momentumSource.cellZone at line 0.
+[27] 
+[27]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[27]     in file primitives/strings/word/wordIO.C at line 78.
+[27] 
+FOAM parallel run exiting
+[27] 
+[28] 
+[28] 
+[28] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[28] Wrong token type - expected word, found on line 0: punctuation '('
+[28] 
+[28] file: IOstream.momentumSource.cellZone at line 0.
+[28] 
+[28]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[28]     in file primitives/strings/word/wordIO.C at line 78.
+[28] 
+FOAM parallel run exiting
+[28] 
+[29] 
+[29] 
+[29] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[29] Wrong token type - expected word, found on line 0: punctuation '('
+[29] 
+[29] file: IOstream.momentumSource.cellZone at line 0.
+[29] 
+[29]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[29]     in file primitives/strings/word/wordIO.C at line 78.
+[29] 
+FOAM parallel run exiting
+[29] 
+[30] 
+[30] 
+[30] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[30] Wrong token type - expected word, found on line 0: punctuation '('
+[30] 
+[30] file: IOstream.momentumSource.cellZone at line 0.
+[30] 
+[30]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[30]     in file primitives/strings/word/wordIO.C at line 78.
+[30] 
+FOAM parallel run exiting
+[30] 
+
+FOAM parallel run exiting
+[31] 
+
+[0] 
+[0] --> FOAM FATAL IO ERROR: (openfoam-2012)
+[0] Wrong token type - expected word, found on line 23: punctuation '('
+[0] 
+[0] file: /nfs/speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D/system/fvOptions.momentumSource.cellZone at line 23.
+[0] 
+[0]     From Foam::Istream& Foam::operator>>(Foam::Istream&, Foam::word&)
+[0]     in file primitives/strings/word/wordIO.C at line 78.
+[0] 
+FOAM parallel run exiting
+[0] 
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 2 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[speed-11.encs.concordia.ca:2239364] 31 more processes have sent help message help-mpi-api.txt / mpi-abort
+[speed-11.encs.concordia.ca:2239364] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[speed-11.encs.concordia.ca:2239364] PMIX ERROR: NO-PERMISSIONS in file dstore_base.c at line 237
+[speed-11.encs.concordia.ca:2239364] PMIX ERROR: NO-PERMISSIONS in file dstore_base.c at line 246
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _7bdb509494-20201222 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructPar
+Date   : Sep 29 2025
+Time   : 12:39:48
+Host   : speed-11.encs.concordia.ca
+PID    : 2239469
+I/O    : uncollated
+Case   : /speed-scratch/d_akrivo/mesh_indep/peh_base_case_m1_2D
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From int main(int, char**)
+    in file reconstructPar.C at line 245
+    No times selected
