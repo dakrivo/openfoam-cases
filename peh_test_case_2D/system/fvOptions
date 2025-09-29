@@ -15,28 +15,31 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+
 momentumSource
 {
-/*type meanVelocityForce;
+    type            meanVelocityForce;
 
-selectionMode all;
+    selectionMode   all;
 
-fields (U);
-Ubar (0.7210 0 0 );
-relaxation 1.0;*/
+    fields          (U);
+    Ubar            (0.72097 0 0);
+	relaxation 0.2;
+}
+
+inletBulkVelocity
+{
+    type            meanVelocityForce;
+
+    selectionMode   cellZone;
+    cellZone        inletCellZone;
+
+    fields          (U);
+    Ubar            (1 0 0);
+	relaxation 0.001;
+}
 
 
-    type            pressureGradientExplicitSource;
-    active          on;            //on/off switch
-    selectionMode   all;       //cellSet // points //cellZone
-
-    pressureGradientExplicitSourceCoeffs
-    {
-        fieldNames  (U);
-        Ubar        (0.7210 0 0 );
-    }
-    
-} 
 
 
 // ************************************************************************* //

@@ -16,8 +16,6 @@ FoamFile
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 
-Ubar            Ubar [0 1 -1 0 0 0 0] (0.7210 0 0); // Ubar is the volume averaged velocity. To convert to the bulk velocity at the inlet patch divide Ubar by 0.7210  Ubar should then be 0.020188
-
 transportModel  Newtonian;
 
 nu              nu [ 0 2 -1 0 0 0 0 ] 1.785714e-04;

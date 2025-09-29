@@ -23,7 +23,7 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         15000;
+endTime         4000;
 
 deltaT          1;
 
@@ -67,10 +67,5 @@ functions
 	
 
 }
-
-libs
-(
-    "pressureGradientExplicitSource.so"
-);
 
 // ************************************************************************* //

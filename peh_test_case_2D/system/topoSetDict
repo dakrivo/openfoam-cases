@@ -24,13 +24,6 @@ actions
         source  patchToFace;
         patch   inlet;
     }
-	{
-        name    inletFaceZoneSet;
-        type    faceZoneSet;
-        action  new;
-        source  setToFaceZone;
-        faceSet inletFaceSet;
-    }
     {
         name    inletCellSet;
         type    cellSet;
@@ -39,6 +32,14 @@ actions
         set     inletFaceSet;
         option  any;
     }
+{
+    name        inletFaceZone;
+    type        faceZoneSet;
+    action      new;
+    source      setToFaceZone;
+    faceSet     inletFaceSet;
+}
+
     {
         name    inletCellSet;
         type    cellSet;
